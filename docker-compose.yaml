@@ -23,6 +23,7 @@ services:
     command: ['uvicorn', '--host', '0.0.0.0', '--port', '8001', '--log-level', 'warning', '--workers', '4', 'services.api.main:app']
     environment:
       DB_HOST: "postgresql"
+      DB_PORT: 5432
       REDIS_HOST: "redis"
       REDIS_PORT: "6379"
     ports:
@@ -31,6 +32,7 @@ services:
     build: .
     environment:
       DB_HOST: "postgresql"
+      DB_PORT: 5432
       REDIS_HOST: "redis"
       REDIS_PORT: "6379"
     depends_on:

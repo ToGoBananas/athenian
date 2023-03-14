@@ -74,6 +74,7 @@ def upgrade():
         sa.PrimaryKeyConstraint("id"),
         sa.UniqueConstraint("team_id"),
     )
+    op.execute("INSERT INTO project (name) VALUES('default');")
     # ### end Alembic commands ###
 
 

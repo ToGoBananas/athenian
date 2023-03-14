@@ -1,0 +1,43 @@
+[tool.black]
+line-length = "120"
+[tool.poetry]
+name = "athenian"
+version = "0.1.0"
+description = ""
+authors = ["Andrei K <endpoo@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+cython = "*"
+fastapi = {git = "https://github.com/ToGoBananas/fastapi.git", develop = false, rev = "master"}
+asyncpg = {git = "https://github.com/ToGoBananas/asyncpg.git", develop = false, rev = "non-blocking-conns"}
+pydantic = "*"
+hiredis = "*"
+httpx = {git = "https://github.com/ToGoBananas/httpx.git", develop = false, rev = "master", extras = ["http2"]}
+uvicorn = {extras = ["standard"], version = "*"}
+redis = "*"
+faker = "*"
+black = "22.12.0"
+pre-commit = "^3.0.0"
+brotli-asgi = "*"
+unimport = "*"
+sqlalchemy = {git = "https://github.com/ToGoBananas/sqlalchemy", develop = false, rev = "rel_1_4"}
+minio = "*"
+orjson = "*"
+pytz = "*"
+pytest = "*"
+pylint = "*"
+databases = "*"
+alembic = "*"
+psycopg2 = "*"
+python-multipart = "*"
+pytest-env = "*"
+pytest-vcr = "*"
+pytest-alembic = "*"
+pytest-asyncio = "*"
+pytest-mock = "^3.8.2"
+pandas = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

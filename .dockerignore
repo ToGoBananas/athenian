@@ -1,0 +1,116 @@
+# Created by https://www.gitignore.io
+
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+!/async_tasks/lib
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+*.pot
+
+
+# PyBuilder
+target/
+
+
+### Django ###
+*.log
+*.pyc
+core/settings/local.py
+core/local_settings.py
+
+
+.env
+db.sqlite3
+
+docker_data
+.idea
+
+.pytest_cache
+*.pid
+*.db
+
+.git
+Dockerfile*
+
+
+volumes/
+report.xml
+kong/
+docker-compose-dev.yml
+docker-compose.yml
+deploy/
+.pre-commit-config.yaml
+.gitlab-ci.yml
+.env-test
+.dockerignore
+.gitignore
+CHANGELOG.md
+README.md
+
+**/test/*.py
+.venv
+/venv

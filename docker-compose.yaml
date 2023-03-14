@@ -1,0 +1,38 @@
+version: '3.8'
+services:
+  postgresql:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: database
+    ports:
+      - '5434:5432'
+  redis:
+    image: redis:7
+    restart: always
+    ports:
+      - '6381:6379'
+#  app:
+#    build: .
+#    depends_on:
+#      - postgresql
+#      - redis
+#    command: ['uvicorn', '--host', '0.0.0.0', '--port', '8001', '--log-level', 'warning', '--workers', '4', 'services.api.main:app']
+#    environment:
+#      DB_HOST: "postgresql"
+#      REDIS_HOST: "redis"
+#      REDIS_PORT: "6379"
+#    ports:
+#      - "8001:8001"
+#  migrations:
+#    build: .
+#    environment:
+#      DB_HOST: "postgresql"
+#      REDIS_HOST: "redis"
+#      REDIS_PORT: "6379"
+#    depends_on:
+#      - postgresql
+#      - redis
+#    command: bash -c "alembic upgrade head"
